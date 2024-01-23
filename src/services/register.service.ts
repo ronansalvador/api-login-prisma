@@ -31,10 +31,8 @@ const createPassword = (password: string) => {
   return newHash
 }
 
-const keySecret = fs.readFileSync('jwt.evaluation.key')
-
 export const newToken = (data: userCreateToken) => {
-  const token = jwt.sign({ data }, keySecret, {
+  const token = jwt.sign({ data }, 'teste-ronan', {
     expiresIn: '7d',
     algorithm: 'HS256',
   })
