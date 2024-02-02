@@ -13,6 +13,7 @@ const compareHash = (password: string, originalHash: string) => {
   return newHash === originalHash
 }
 export const loginService = async ({ email, password }: userLogin) => {
+  console.log('teste login')
   const user = await prisma.user.findUnique({
     where: {
       email,
