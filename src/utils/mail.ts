@@ -17,7 +17,7 @@ export const enviarNotificacaoEmail = async (mensagem: string) => {
   const mailOptions = {
     from: 'ronanfs89@gmail.com',
     to: 'ronansalvador@yahoo.com.br',
-    subject: 'Comanda Cadastrada',
+    subject: 'Teste Deploy',
     text: mensagem,
   }
 
