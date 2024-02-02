@@ -3,21 +3,30 @@ require('dotenv').config()
 
 export const enviarNotificacaoEmail = async (mensagem: string) => {
   // Configurações do transporte de e-mail (usando Gmail como exemplo)
+  // const transporter = nodemailer.createTransport({
+  //   host: process.env.SMTP,
+  //   port: process.env.SMTP_PORT,
+  //   secure: true,
+  //   auth: {
+  //     user: 'ronanfs89@gmail.com',
+  //     pass: process.env.PASSWORD_APP,
+  //   },
+  // })
+
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP,
-    port: process.env.SMTP_PORT,
-    secure: true,
+    host: 'smtp.ethereal.email',
+    port: 587,
     auth: {
-      user: 'ronanfs89@gmail.com',
-      pass: process.env.PASSWORD_APP,
+      user: 'frederique28@ethereal.email',
+      pass: '6EbWNpr8VCgQByRfw1',
     },
   })
 
   // Detalhes do e-mail
   const mailOptions = {
-    from: 'ronanfs89@gmail.com',
+    from: 'frederique28@ethereal.email',
     to: 'ronansalvador@yahoo.com.br',
-    subject: 'Teste Deploy',
+    subject: 'TESTE GMAIL',
     text: mensagem,
   }
 
