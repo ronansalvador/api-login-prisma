@@ -32,7 +32,7 @@ export const loginService = async ({ email, password }: userLogin) => {
 
   const { password: _, ...userWithoutPassword } = user
   const token = newToken(userWithoutPassword)
-
+  console.log('teste Ronan')
   enviarNotificacaoEmail('Voce fex um novo login')
 
   return { type: 200, message: { ...userWithoutPassword, token } }
